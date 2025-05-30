@@ -4,7 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import se.reky.hakan.model.Player;
 import se.reky.hakan.service.PlayerService;
 
 import java.util.Scanner;

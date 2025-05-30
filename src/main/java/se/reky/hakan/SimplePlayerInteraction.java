@@ -1,7 +1,5 @@
 package se.reky.hakan;
 
-import se.reky.hakan.model.Player;
-
 public class SimplePlayerInteraction implements PlayerInteraction {
     private final IOHandler ioHandler;
 

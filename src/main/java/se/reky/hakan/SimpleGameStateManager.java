@@ -1,10 +1,5 @@
 package se.reky.hakan;
 
-import se.reky.hakan.model.Goblin;
-import se.reky.hakan.model.Guard;
-import se.reky.hakan.model.Player;
-import se.reky.hakan.model.Actor;
-
 public class SimpleGameStateManager implements GameStateManager {
     private Player player;
     private final IOHandler ioHandler;

@@ -1,6 +1,5 @@
 package se.reky.hakan;
 
-import se.reky.hakan.model.Player;
 import se.reky.hakan.service.PlayerService;
 
 public class Game {

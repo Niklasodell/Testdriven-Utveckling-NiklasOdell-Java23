@@ -1,6 +1,4 @@
 package se.reky.hakan;
-import se.reky.hakan.model.Actor;
-import se.reky.hakan.model.Player;
 
 public interface GameStateManager {
     void executeTownGate();

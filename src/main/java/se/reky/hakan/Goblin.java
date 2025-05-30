@@ -1,4 +1,4 @@
-package se.reky.hakan.model;
+package se.reky.hakan;
 
 public class Goblin extends Actor {
     public Goblin() {

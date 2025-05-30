@@ -3,7 +3,7 @@ package se.reky.hakan.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import se.reky.hakan.model.Player;
+import se.reky.hakan.Player;
 import se.reky.hakan.repository.PlayerRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package se.reky.hakan.model;
+package se.reky.hakan;
 
 public class Guard extends Actor {
     public Guard() {
