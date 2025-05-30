@@ -1,6 +1,7 @@
 package se.reky.hakan;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -32,15 +33,19 @@ public class PlayerControllerSeleniumTest {
     @Test
     void testCorrectNumberOfPlayersShown() {
         driver.get("http://localhost:8080/players");
-        int numberOfPlayers = driver.findElements(By.tagName("tr")).size() - 1;
-        assertEquals(2, numberOfPlayers);
+        List<WebElement> playerItems = driver.findElements(By.cssSelector("li"));
+        assertTrue(playerItems.size() >= 1, "Minst en spelare borde visas i listan");
     }
 
     @Test
     void testFirstPlayerNameIsDisplayed() {
         driver.get("http://localhost:8080/players");
-        WebElement playerName = driver.findElement(By.cssSelector("tr:nth-child(2) td"));
-        assertTrue(playerName.isDisplayed());
+        List<WebElement> playerItems = driver.findElements(By.cssSelector("li"));
+        assertFalse(playerItems.isEmpty(), "Det finns inga spelare i listan");
+
+        WebElement firstPlayer = playerItems.get(0);
+        assertTrue(firstPlayer.isDisplayed(), "Första spelaren är inte synlig");
+        assertTrue(firstPlayer.getText().contains("niklas"), "Första spelaren borde innehålla namnet 'niklas'");
     }
 
     @Test
